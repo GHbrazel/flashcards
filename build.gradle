@@ -23,8 +23,7 @@ checkstyle {
    configFile file('checkstyle.xml')
 }
 
-com.github.spotbugs {
-   toolVersion = '3.1.11'
+spotbugs {
    ignoreFailures = false
 }
 
