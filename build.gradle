@@ -23,14 +23,13 @@ checkstyle {
    configFile file('checkstyle.xml')
 }
 
-spotbugs {
-   toolVersion = '3.1.11'
-   spotbugsMain {
-      ignoreFailures = false
-   }
-}
 
-
+plugins.withType(SpotBugsPlugin) {
+        spotbugs {
+            toolVersion = '3.1.11'
+            ignoreFailures = false
+        }
+    }
 
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -39,6 +38,8 @@ repositories {
 }
 
 dependencies {
+    spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.7.1'
+
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:26.0-jre'
 
