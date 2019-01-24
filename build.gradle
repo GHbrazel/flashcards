@@ -23,6 +23,10 @@ checkstyle {
    configFile file('checkstyle.xml')
 }
 
+spotbugs {
+  toolVersion = '3.1.11'
+}
+
 spotbugsMain {
    ignoreFailures = false
 }
