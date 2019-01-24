@@ -16,16 +16,13 @@ plugins {
     // Apply the Checkstyle plugin
     id 'checkstyle'
 
-    id 'com.github.spotbugs' version '3.1.10'
+    id 'com.github.spotbugs' version '1.6.9'
 }
 
 checkstyle {
    configFile file('checkstyle.xml')
 }
 
-spotbugs {
-   ignoreFailures = false
-}
 
 repositories {
     // Use jcenter for resolving your dependencies.
