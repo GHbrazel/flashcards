@@ -25,7 +25,7 @@ checkstyle {
 
 spotbugs {
    toolVersion = '3.1.11'
-   ignoreFailures = true
+   ignoreFailures = false
 }
 
 repositories {
