@@ -24,12 +24,13 @@ checkstyle {
 }
 
 spotbugs {
-  toolVersion = '3.1.11'
+   toolVersion = '3.1.11'
+   spotbugsMain {
+      ignoreFailures = false
+   }
 }
 
-spotbugsMain {
-   ignoreFailures = false
-}
+
 
 repositories {
     // Use jcenter for resolving your dependencies.
