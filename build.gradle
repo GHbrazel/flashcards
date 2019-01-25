@@ -16,7 +16,7 @@ plugins {
     // Apply the Checkstyle plugin
     id 'checkstyle'
 
-    id 'com.github.spotbugs' version '1.6.9'
+    // id 'com.github.spotbugs' version '1.6.9'
 }
 
 checkstyle {
@@ -25,15 +25,9 @@ checkstyle {
 
 // spotbugs {
 //    ignoreFailures = false
-//}
+// }
 
-spotbugs {
-  toolVersion '3.1.10'
-  ignoreFailures false
-  configFile file("spotbugs.xml")
-}
-
-task spotbugs(dependsOn: [spotbugsMain, spotbugsTest])
+// task spotbugs(dependsOn: [spotbugsMain, spotbugsTest])
 
 repositories {
     // Use jcenter for resolving your dependencies.
