@@ -56,7 +56,7 @@ apply plugin: 'spotbugs'
 spotbugs {
   toolVersion '3.1.10'
   ignoreFailures false
-  configFile file("/spotbugs.xml")
+  configFile file("spotbugs.xml")
 }
 
-task checkstyle(dependsOn: [checkstyleMain, checkstyleTest])
+task spotbugs(dependsOn: [spotbugsMain, spotbugsTest])
