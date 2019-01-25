@@ -23,9 +23,9 @@ checkstyle {
    configFile file('checkstyle.xml')
 }
 
-spotbugs {
-    ignoreFailures = false
-}
+// spotbugs {
+//    ignoreFailures = false
+//}
 
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -49,3 +49,14 @@ jar {
 
 // Define the main class for the application
 mainClassName = 'flashcards.App'
+
+// Setup checkstyle
+apply plugin: 'spotbugs'
+
+spotbugs {
+  toolVersion '3.1.10'
+  ignoreFailures false
+  configFile file("/spotbugs.xml")
+}
+
+task checkstyle(dependsOn: [checkstyleMain, checkstyleTest])
